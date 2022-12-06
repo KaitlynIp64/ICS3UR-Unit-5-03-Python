@@ -5,35 +5,35 @@
 # This program tells the user their mark as a percentage
 
 
-def calculate(mark):
-    # this function calculates the user's mark as a percentage
+def calculate(int_mark):
+    # This function calculates the user's mark as a %
 
     # Process
-    if mark == "4+":
+    if int_mark == "4+":
         percentage = 95
-    elif mark == "4":
+    elif int_mark == "4":
         percentage = 87
-    elif mark == "4-":
+    elif int_mark == "4-":
         percentage = 80
-    elif mark == "3+":
+    elif int_mark == "3+":
         percentage = 77
-    elif mark == "3":
+    elif int_mark == "3":
         percentage = 73
-    elif mark == "3-":
+    elif int_mark == "3-":
         percentage = 70
-    elif mark == "2+":
+    elif int_mark == "2+":
         percentage = 67
-    elif mark == "2":
+    elif int_mark == "2":
         percentage = 63
-    elif mark == "2-":
+    elif int_mark == "2-":
         percentage = 60
-    elif mark == "1+":
+    elif int_mark == "1+":
         percentage = 57
-    elif mark == "1":
+    elif int_mark == "1":
         percentage = 53
-    elif mark == "1-":
+    elif int_mark == "1-":
         percentage = 50
-    elif mark == "R":
+    elif int_mark == "R":
         percentage = 30
     else:
         percentage = -1
@@ -54,6 +54,8 @@ def main():
         print("That is not a valid input.")
     else:
         print("Your mark as a percentage is: {0}%".format(user_percentage))
+
+        print("\nDone.")
 
 
 if __name__ == "__main__":

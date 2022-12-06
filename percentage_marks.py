@@ -55,7 +55,7 @@ def main():
     else:
         print("Your mark as a percentage is: {0}%".format(user_percentage))
 
-        print("\nDone.")
+    print("\nDone.")
 
 
 if __name__ == "__main__":

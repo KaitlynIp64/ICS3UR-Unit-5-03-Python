@@ -5,55 +5,60 @@
 # This program tells the user their mark as a percentage
 
 
-def calculate(int_mark):
-    # This function calculates the user's mark as a %
+def calculate_grade(mark: str) -> int:
+    # calculate area
 
-    # Process
-    if int_mark == "4+":
-        percentage = 95
-    elif int_mark == "4":
-        percentage = 87
-    elif int_mark == "4-":
-        percentage = 80
-    elif int_mark == "3+":
-        percentage = 77
-    elif int_mark == "3":
-        percentage = 73
-    elif int_mark == "3-":
-        percentage = 70
-    elif int_mark == "2+":
-        percentage = 67
-    elif int_mark == "2":
-        percentage = 63
-    elif int_mark == "2-":
-        percentage = 60
-    elif int_mark == "1+":
-        percentage = 57
-    elif int_mark == "1":
-        percentage = 53
-    elif int_mark == "1-":
-        percentage = 50
-    elif int_mark == "R":
-        percentage = 30
-    else:
-        percentage = -1
-    return percentage
+    # process
+    match mark:
+        case "4+":
+            percent = 97
+        case "4":
+            percent = 87
+        case "4-":
+            percent = 80
+        case "3+":
+            percent = 78
+        case "3":
+            percent = 75
+        case "3-":
+            percent = 70
+        case "2+":
+            percent = 68
+        case "2":
+            percent = 65
+        case "2-":
+            percent = 61
+        case "1+":
+            percent = 58
+        case "1":
+            percent = 54
+        case "1-":
+            percent = 51
+        case "R":
+            percent = 30
+        case "NE":
+            percent = 0
+        case _:
+            percent = -1
+
+    return percent
 
 
 def main():
-    # This function allows the user to input a mark and receive an outputted %
+    # input
 
-    # Input
-    user_mark = input("Enter the level you want to convert into a percentage: ")
+    mark = input("Enter the level you want converted into a percentage: ")
 
-    # Process
-    user_percentage = calculate(user_mark)
-
-    # Output
-    if user_percentage == -1:
+    # call functions
+    mark_percentage = calculate_grade(mark)
+    if mark_percentage == -1:
         print("That is not a valid input.")
     else:
-        print("Your mark as a percentage is: {0}%".format(user_percentage))
+        print(
+            "The level {0} converted into a percentage is: {1}%".format(
+                mark, mark_percentage
+            )
+        )
 
     print("\nDone.")
 
